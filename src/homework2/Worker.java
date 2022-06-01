@@ -1,5 +1,8 @@
 package homework2;
 
+import homework2.interfaces.OnTaskDoneListener;
+import homework2.interfaces.OnTaskErrorListener;
+
 public class Worker {
 
     private final OnTaskDoneListener callback;
@@ -20,15 +23,5 @@ public class Worker {
                 callback.onDone("Task " + i + " is done!");
             }
         }
-    }
-
-    @FunctionalInterface
-    public interface OnTaskDoneListener {
-        void onDone(String result);
-    }
-
-    @FunctionalInterface
-    public interface OnTaskErrorListener {
-        void onError(String result);
     }
 }
